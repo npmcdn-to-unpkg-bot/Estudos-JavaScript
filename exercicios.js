@@ -42,3 +42,53 @@ for (var y = 0; y < size; y++) {
   }
   board += "\n";
 }
+
+// Exercício 4
+function min(num1, num2) {
+    return num1 < num2 ? num1 : num2;
+}
+
+console.log(min(0, 10));
+console.log(min(0, -10));
+
+// Exercício 5
+function isEven(n) {
+  if (n == 0)
+    return true;
+  else if (n == 1)
+    return false;
+  else if (n < 0)
+    return isEven(-n);
+  else
+    return isEven(n - 2);
+}
+
+console.log(isEven(50));
+console.log(isEven(75));
+console.log(isEven(-1));
+
+// Exercício 6
+function countBs(frase) {
+    
+    var qtdeB = 0;
+    for (var index = 0; index < frase.length - 1; index++) {
+        if (frase[index] === "B")
+            qtdeB++;
+    }
+
+    return qtdeB;
+}
+
+function countChar(frase, caractere) {
+    
+    var qtdeChar = 0;
+    for (var index = 0; index < frase.length - 1; index++) {
+        if (frase[index] === caractere)
+            qtdeChar++;
+    }
+
+    return qtdeChar;
+}
+
+console.log(countBs("BBC"));
+console.log(countChar("kakkerlak","k"));
